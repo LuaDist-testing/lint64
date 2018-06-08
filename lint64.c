@@ -2,7 +2,7 @@
 * lint64.c
 * int64 nummbers for Lua
 * Luiz Henrique de Figueiredo <lhf@tecgraf.puc-rio.br>
-* 05 Aug 2013 21:04:25
+* 05 Aug 2013 12:33:00
 * This code is hereby placed in the public domain.
 */
 
@@ -40,8 +40,7 @@ static int pushInt(lua_State *L, Int z)
 {
  Int *p=lua_newuserdata(L,sizeof(Int));
  *p=z;
- luaL_getmetatable(L,MYTYPE);
- lua_setmetatable(L,-2);
+ luaL_setmetatable(L,MYTYPE);
  return 1;
 }
 
@@ -127,8 +126,7 @@ LUALIB_API int luaopen_int64(lua_State *L)
 {
  if (sizeof(Int)<8) luaL_error(L,"int64 cannot work with %d-byte values",sizeof(Int));
  luaL_newmetatable(L,MYTYPE);
- lua_setglobal(L,MYNAME);
- luaL_register(L,MYNAME,R);
+ luaL_setfuncs(L,R,0);
  lua_pushliteral(L,"version");			/** version */
  lua_pushliteral(L,MYVERSION);
  lua_settable(L,-3);

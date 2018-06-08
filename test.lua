@@ -1,7 +1,7 @@
 -- test int64 library
 
 ------------------------------------------------------------------------------
-require"int64"
+local int64=require"int64"
 
 print(int64.version)
 
@@ -70,7 +70,7 @@ for i=1,25 do
 	z=z*i
 	f=f*i
 	s=int64.tonumber(z)
-	print(i,z,f,f==int64.tonumber(z),int64.__tostring(z)==F[i])
+	print(i,z,f,z<=f and z>=f,f==int64.tonumber(z),int64.__tostring(z)==F[i])
 	--print(i,int64.new(F[i]))
 end
 

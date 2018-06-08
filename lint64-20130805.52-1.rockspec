@@ -1,16 +1,16 @@
 -- This file was automatically generated for the LuaDist project.
 
 package="lint64"
-version="20130805.51-1"
+version="20130805.52-1"
 -- LuaDist source
 source = {
-  tag = "20130805.51-1",
+  tag = "20130805.52-1",
   url = "git://github.com/LuaDist-testing/lint64.git"
 }
 -- Original source
 -- source = {
---    url = "http://www.tecgraf.puc-rio.br/~lhf/ftp/lua/5.1/lint64.tar.gz",
---    md5="acbc8698d4c07524b0a19e4048b95058",
+--    url = "http://www.tecgraf.puc-rio.br/~lhf/ftp/lua/5.2/lint64.tar.gz",
+--    md5="0d78b67dc0525abf2962ee492c504819",
 --    dir = "int64"
 -- }
 description = {
@@ -24,7 +24,7 @@ description = {
    license = "Public domain"
 }
 dependencies = {
-   "lua ~> 5.1"
+   "lua ~> 5.2"
 }
 
 build = {
